@@ -54,7 +54,7 @@ def detect_image(placeholder):
     """
 
     with st.spinner('Detecting 🐟 🐠 🦈 🐡...'):
-        call(["python", "./app//yolov7/detect.py", "--weights", "./app/weights/best.pt",
+        call(["python", "./app/yolov7/detect.py", "--weights", "./app/weights/best.pt",
               "--conf-thres", "0.1", "--source", "source.jpg", "--no-trace" ,"--exist-ok", "--project", "./app/detection", "--name", "output"])
 
         detected_img = glob.glob("./app/detection/output/**.jpg")[0]
