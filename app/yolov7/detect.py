@@ -4,6 +4,7 @@ from pathlib import Path
 import subprocess
 import sys
 subprocess.check_call([sys.executable, "-m", "pip", "install", "opencv-python"])
+subprocess.check_call(["sudo", "apt-get", "install", "ffmpeg", "libsm6", "libxext6", "-y"])
 import cv2
 import torch
 import torch.backends.cudnn as cudnn
