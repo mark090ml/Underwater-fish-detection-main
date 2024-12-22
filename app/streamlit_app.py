@@ -3,7 +3,9 @@ import glob
 from PIL import Image
 import streamlit as st
 from subprocess import call
+import sys
 
+sys.path.append('/usr/local/lib/python3.11/site-packages')
 
 def main():
     new_title = '<p style="font-size: 42px;">Welcome to Fish Detection App!</p>'
