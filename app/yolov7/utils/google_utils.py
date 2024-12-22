@@ -22,8 +22,8 @@ def attempt_download(file, repo='WongKinYiu/yolov7'):
 
     if not file.exists():
         try:
-            response = requests.get(f'https://api.github.com/repos/{repo}/releases/latest').json()  # github api
-            assets = [x['name'] for x in response['assets']]  # release assets
+            response = requests.get(f'https://api.github.com/repos/{repo}/releases').json()  # github api
+            assets = [x['name'] for x in response['assets']][0] # release assets
             tag = response['tag_name']  # i.e. 'v1.0'
         except:  # fallback plan
             assets = ['yolov7.pt', 'yolov7-tiny.pt', 'yolov7x.pt', 'yolov7-d6.pt', 'yolov7-e6.pt', 
