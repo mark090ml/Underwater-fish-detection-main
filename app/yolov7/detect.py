@@ -1,7 +1,9 @@
 import argparse
 import time
 from pathlib import Path
-
+import subprocess
+import sys
+subprocess.check_call([sys.executable, "-m", "pip", "install", "opencv-python"])
 import cv2
 import torch
 import torch.backends.cudnn as cudnn
